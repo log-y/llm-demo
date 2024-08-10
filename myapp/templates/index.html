@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Small LLM Demo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script defer src="{% static 'myapp/script.js' %}"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Tokens and Probabilities</h1>
+        <div class="input-container">
+            <textarea id="user-input"
+                placeholder="Type here to start generating..."></textarea>
+            <button id="send-button">Send</button>
+        </div>
+        <div id="predictions" class="output scrollable"></div>
+
+    </div>
+    <link rel="stylesheet" href="{% static 'myapp/styles.css' %}">
+    </style>
+</body>
+
+</html>

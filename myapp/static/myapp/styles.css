@@ -1,0 +1,219 @@
+/* Apply the Google Font to the entire document */
+/* LLM APP LLM APP LLM APP LLM APP LLM APP */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #fbc2eb, #a18cd1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+}
+
+/* Define the container for the elements */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 700px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Style the heading */
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Style the input container */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+/* Style the textarea */
+textarea {
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    resize: none;
+}
+
+/* Style the button */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Style for response, time, and predictions divs */
+.output {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(240, 240, 240, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 1em;
+    text-align: left;
+}
+
+/* Scrollable container */
+.scrollable {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.scrollable::-webkit-scrollbar {
+    width: 4px; 
+    height: 10px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+    background: rgba(240, 240, 240, 0.9); 
+    border-radius: 4px;
+}
+ 
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: #bbb; 
+    border-radius: 4px; 
+    /* border: 2px solid rgba(240, 240, 240, 0.9);  */
+    /* background-clip: padding-box; */
+}
+
+/* Styling for each prediction block */
+.token-prediction {
+    margin-bottom: 30px; /* Increased space between each prediction */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Styling for elements within each prediction block */
+.token-prediction h4,
+.token-prediction h5,
+.current-text-container h2,
+.current-text-container h6,
+.token-prediction p {
+    margin: 5px 0; /* Reduced space between elements within a prediction */
+}
+
+h4{
+    font-size: 1.2em;
+}
+
+.cell-numbers{
+    font-size:0.85em;
+}
+
+.small-header {
+    font-weight: normal;
+    font-size: 0.9em;
+    /* color: #777; */
+    opacity: 0.9;
+}
+
+.smaller-header {
+    font-weight: normal;
+    font-size: 0.8em;
+    /* color: #777; */
+    opacity: 0.9;
+}
+
+.small-p {
+    font-weight: normal;
+    font-size: 0.8em;
+    /* color: #777; */
+    opacity: 0.8;
+}
+/* 
+.selected-token {
+    font-weight: normal;
+    font-size: 0.9em;
+    opacity: 0.9;
+}
+.token-prediction p {
+    font-weight: normal;
+    font-size: 0.8em;
+    opacity: 0.9;
+} */
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Styling for the current text container */
+.current-text-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(240, 240, 240, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+/* Animate the background gradient */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Emphasize important text */
+.important-text {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+    text-decoration: underline;
+}
+
+/* De-emphasize less important text */
+.less-important-text {
+    font-weight: normal;
+    font-size: 0.9em;
+    color: #777;
+    opacity: 0.7;
+}
