@@ -1,11 +1,8 @@
-import tiktoken
 from dataclasses import dataclass
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
-import math
 import inspect
-import os
 
 #This represents the self-attention stage, responsible for understanding how
 #each token should 'attend' to other tokens. This is required to extract how tokens
